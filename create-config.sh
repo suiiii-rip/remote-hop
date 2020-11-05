@@ -4,7 +4,8 @@ set -x
 
 sshdOrgImage=linuxserver/openssh-server
 configFile=./sshd_config.tmp
-tmpContainer=$(cat /dev/urandom | tr -dc 'a-zA-Z0-9' | fold -w 32 | head -n 1)
+tmpContainer="sshabc123"
+#tmpContainer=$(cat /dev/urandom | tr -dc 'a-zA-Z0-9' | fold -w 32 | head -n 1)
 
 declare -A params=( ['AllowTcpForwarding']='yes' \
                     ['AllowStreamLocalForwarding']='yes' \
